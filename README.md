@@ -31,12 +31,13 @@ Before you begin, ensure you have the following installed on your local machine:
 
 
 <img src = "https://github.com/user-attachments/assets/89c65872-cac7-430e-9349-3d488f65fcd8" height=30%  width=35%>
+<img src = "https://github.com/user-attachments/assets/39d1a383-7434-4012-b80d-8bfeff32b640" height=30%  width=35%>
+<img src = "https://github.com/user-attachments/assets/b4a415b3-3cab-489f-b839-51786b93cd71" height=30%  width=35%>
 
 <div>
 
    <video height="450" src="https://github.com/user-attachments/assets/464794df-94b2-4e5b-aff6-a0652cd14cbd"/>
 
 </div>
-
 
 
