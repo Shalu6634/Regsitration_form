@@ -37,9 +37,10 @@ Before you begin, ensure you have the following installed on your local machine:
 <div>
 
    <video height="450" src="https://github.com/user-attachments/assets/464794df-94b2-4e5b-aff6-a0652cd14cbd"/>
-   <video height="450" src="https://github.com/user-attachments/assets/a267937a-8c82-4869-a868-0bb75cdbe96c"/>
-
+   
 
 </div>
+
+<video height="450" src="https://github.com/user-attachments/assets/a267937a-8c82-4869-a868-0bb75cdbe96c"/>
 
 
