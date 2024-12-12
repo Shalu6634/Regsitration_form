@@ -44,3 +44,17 @@ Before you begin, ensure you have the following installed on your local machine:
 <video height="450" src="https://github.com/user-attachments/assets/a267937a-8c82-4869-a868-0bb75cdbe96c"/>
 
 
+# API GET,POST
+<div>
+
+   <video height="450" src="https://github.com/user-attachments/assets/efeb0521-9981-4038-9392-261e78056871"/>
+   
+
+
+
+
+
+</div>
+
+
+
