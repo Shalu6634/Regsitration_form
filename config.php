@@ -1,3 +1,4 @@
+
 <?php 
 
  class Config
@@ -27,103 +28,32 @@
         $this->connect();
     }
 
-    public function insert($name,$age,$course,$address)
+    public function insert($name, $age, $course,$address)
     {
-        $query = "INSERT INTO student(name,age,course,address) VALUES('$name',$age,'$course','$address')";
-    
-        $res= mysqli_query($this->connection,$query);
-        // if($res)
-        // {
-        //    echo "Database inserted successfully";
-        // }
-        // else {
-        //     echo "Database inserted failed !";
-        //  }
+        $query = "INSERT INTO student (name, age, course,address) VALUES ('$name', $age, '$course', '$address')";
+        $res = mysqli_query($this->connection, $query);
+        return $res;
+
     }
- }
-?>
 
-
-//update
-
-<?php 
-
- header("Access-Control-Allow-Method:PUT");
- header("Content-Type:application/json");
-
- include("config.php");
-
- $c1= new Config();
-
-
- if($_SERVER["REQUEST_METHOD"]== "PUT")
- {
-
-    $data = file_get_contents("php://input");
-    parse_str($data, $result);
-    $id = $result["id"];
-    $name = $result["name"];
-    $age = $result["age"];
-    $course = $result["course"];
-    $address = $result["address"];
-
-    $res=$c1->update($id, $name, $age, $course, $address);
-
-    if($res)
-    { 
-       $arr["msg"] = "Data Updated Successfully";
-    }
-    else
+    public function fetch()
     {
-        $arr["msg"] = "Data not Update";
+        $query = "SELECT * FROM student";
+        $res = mysqli_query($this->connection,$query);
+        return $res;
     }
-
- }
- else
- {
-    $arr['err'] = "Only PUT type is allowed ";
- }
-
- echo json_encode($arr);
-
-?>
-
-//delete
-
-<?php 
-
- header("Access-Control-Allow-Method:DELETE");
- header("Content-Type:application/json");
-
- include("config.php");
-
- $c1= new Config();
-
-
- if($_SERVER["REQUEST_METHOD"]== "DELETE")
- {
-
-    $data = file_get_contents("php://input");
-    parse_str($data, $result);
-    $id = $result["id"];
-
-    $res=$c1->delete($id);
-
-    if($res)
-    { 
-       $arr["msg"] = "Data deleted Successfully";
-    }
-    else
+    public function delete($id)
     {
-        $arr["msg"] = "Data not deleted";
+        $query = "DELETE FROM student WHERE id = $id";
+        $res = mysqli_query($this->connection,$query);
+        return $res;
     }
 
+    public function update($id,$name,$age,$course,$address)
+    {
+        $query = "UPDATE student SET name='$name',age=$age,course='$course',address='$address' WHERE id=$id";
+        $res = mysqli_query($this->connection,$query);
+        return $res;
+    }
  }
- else
- {
-    $arr['err'] = "Only DELETE type is allowed ";
- }
-
- echo json_encode($arr);
-
 ?>
