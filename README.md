@@ -45,10 +45,17 @@ Before you begin, ensure you have the following installed on your local machine:
 </video>div>
 
 
-## API GET,POST
+## API GET POST
 <div>
 
    <video height="450" src="https://github.com/user-attachments/assets/efeb0521-9981-4038-9392-261e78056871"/>
+   
+</div>
+
+## API All in One
+<div>
+
+   <video height="450" src="https://github.com/user-attachments/assets/16931340-13fa-49e0-b20c-e6938f4998f2"/>
    
 </div>
 
@@ -56,8 +63,11 @@ Before you begin, ensure you have the following installed on your local machine:
 <div>
 
    <video height="450" src="https://github.com/user-attachments/assets/01a91d88-d721-48d9-bd76-7358c6e4e7cb"/>
-   
 </div>
+
+
+
+
 
 
 
