@@ -4,6 +4,8 @@ include('config.php');
 
 $c1 = new Config();
 $res = $c1->fetch();
+$data1 = $c1->fetchImages();
+
 
 
 $is_btn_set = isset($_POST['button']);
@@ -57,14 +59,14 @@ if(isset($_POST['update']))
     <style>
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/premium-photo/student-concentrating-taking-exam-writing-classroom_38013-102779.jpg');
-   
+
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         height: 100vh;
-     
+
         margin: 0;
-   
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -72,7 +74,7 @@ if(isset($_POST['update']))
 
     .container {
         background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-       
+
         padding: 20px;
         border-radius: 20px;
         color: white;
@@ -114,6 +116,7 @@ if(isset($_POST['update']))
     <div class="container mx-auto p-2" style="width: 650px;">
 
         <table class="table table-hover">
+
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -125,6 +128,7 @@ if(isset($_POST['update']))
                 </tr>
             </thead>
             <tbody>
+
                 <?php while($data = mysqli_fetch_assoc($res)){?>
                 <tr>
                     <th scope="row"><?php echo $data['id']?></th>
@@ -132,7 +136,6 @@ if(isset($_POST['update']))
                     <td><?php echo $data['age']?></td>
                     <td><?php echo $data['course']?></td>
                     <td><?php echo $data['address']?></td>
-
                     <td>
                         <button type="button" class="btn btn-warning"
                             onclick="showUpdateDialog(<?php echo htmlspecialchars(json_encode($data)) ?>)">Update</button>
@@ -143,8 +146,16 @@ if(isset($_POST['update']))
                     </td>
                 </tr>
                 <?php } ?>
+                
+
             </tbody>
         </table>
+
+
+
+
+    </div>
+    <div>
 
     </div>
 
@@ -162,7 +173,6 @@ if(isset($_POST['update']))
                             <label for="updateName" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="updateName" name="nameId">
                         </div>
-                
                         <div class="mb-3">
                             <label for="updateAge" class="form-label">Age</label>
                             <input type="number" class="form-control" id="updateAge" name="ageId">
@@ -170,9 +180,7 @@ if(isset($_POST['update']))
                         <div class="mb-3">
                             <label for="updateCourse" class="form-label">Course</label>
                             <input type="text" class="form-control" id="updateCourse" name="courseId">
-
                         </div>
-                
                         <div class="mb-3">
                             <label for="updateAddress" class="form-label">Address</label>
                             <input type="text" class="form-control" id="updateAddress" name="addressId">
