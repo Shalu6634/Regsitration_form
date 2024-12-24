@@ -1,4 +1,5 @@
 
+
 <?php 
 
  class Config
@@ -36,12 +37,14 @@
 
     }
 
+   
     public function fetch()
     {
         $query = "SELECT * FROM student";
         $res = mysqli_query($this->connection,$query);
         return $res;
     }
+    
     public function delete($id)
     {
         $query = "DELETE FROM student WHERE id = $id";
@@ -55,5 +58,21 @@
         $res = mysqli_query($this->connection,$query);
         return $res;
     }
+
+    public function insertImage($name,$image)
+    {
+        $query = "INSERT INTO media(name,image) VALUES ('$name','$image')";
+        $res = mysqli_query($this->connection, $query);
+        return $res;
+
+    }
+    public function fetchImages()
+    {
+        $query = "SELECT * FROM media";
+        $res = mysqli_query($this->connection,$query);
+        return $res;
+    }
  }
 ?>
+
+ 
